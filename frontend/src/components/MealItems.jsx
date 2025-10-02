@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { currencyFormatter } from '../utility/formatting'
 import Button from './UI/Button'
+import CartContext from '../store/CartContext';
 
 function MealItems({meal}) {
+  const cartCtext =  useContext(CartContext);
+  function handleAddMealItem() {
+    cartCtext.addItem(meal)
+  } 
   return (
     <li className='meal-item'>
         <article>
