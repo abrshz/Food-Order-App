@@ -18,7 +18,7 @@ function MealItems({meal}) {
                 <p className="meal-item-description">{meal.description}</p>
             </div>
             <p className="meal-item-actions">
-                <Button>Add to Cart</Button>
+                <Button onClick={handleAddMealItem}>Add to Cart</Button>
             </p>
         </article>
     </li>
