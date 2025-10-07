@@ -2,9 +2,11 @@ import React, { useContext } from 'react'
 import Modal from './UI/Modal'
 import CartContext from '../store/CartContext'
 import { useCurrencyFormatter } from '../hooks/useCurrencyFormatter'
+import UserProgressContext from '../store/UserProgressContext'
 
 function Cart() {
     const cartCtx = useContext(CartContext)
+    const userProgressCtx = useContext(UserProgressContext)
     const cartTotal = cartCtx.items.reduce((totalPrice , item)=> totalPrice + item.quantity * item.price, 0)
   return (
     <Modal className='cart' open={true}>
