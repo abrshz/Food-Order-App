@@ -127,9 +127,14 @@ h1 {
   color: #1d1a16;
 }
 
+.modal-actions button {
+  background-color: #ffc404;;
+}
+
 .modal-actions .text-button:hover,
 .modal-actions .text-button:active {
   color: #312c1d;
+  
 }
 
 .cart-total {
