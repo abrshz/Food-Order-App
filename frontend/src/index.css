@@ -128,7 +128,8 @@ h1 {
 }
 
 .modal-actions button {
-  background-color: #ffc404;;
+  background-color: #ffc404;
+  border: none;
 }
 
 .modal-actions .text-button:hover,
