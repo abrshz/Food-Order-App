@@ -22,7 +22,7 @@ function Cart() {
         <ul>
           {cartCtx.items.map(item => <li key={item.id}>{item.name} - {item.quantity} </li>)}
         </ul>
-        <p className='cart-total'>{cartTotal}</p>
+        <p className='cart-total'>${cartTotal}</p>
         <p className="modal-actions">
           <button onClick={handleClose}>Close</button>
           <button onClick={handleCheckout}>Go to Checkout</button>
