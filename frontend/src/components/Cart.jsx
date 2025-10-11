@@ -24,8 +24,8 @@ function Cart() {
         </ul>
         <p className='cart-total'>${cartTotal}</p>
         <p className="modal-actions">
-          <button onClick={handleClose}>Close</button>
-          <button onClick={handleCheckout}>Go to Checkout</button>
+          <button className='buttonClose' onClick={handleClose}>Close</button>
+          <button className='buttonCheckout' onClick={handleCheckout}>Go to Checkout</button>
         </p>
     </Modal>
   )

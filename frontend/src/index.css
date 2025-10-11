@@ -126,8 +126,12 @@ h1 {
 .modal-actions .text-button {
   color: #1d1a16;
 }
+.buttonClose {
+  background-color: #E4DDD4;
+  border: none;
+}
 
-.modal-actions button {
+.buttonCheckout {
   background-color: #ffc404;
   border: none;
 }
