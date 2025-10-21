@@ -21,12 +21,12 @@ function Cart() {
     <Modal className='cart' open={userProgressCtx.progress === 'cart'}>
         <h2>Your Cart</h2>
         <ul>
-          {cartCtx.items.map(item => <CartItem key={item.id} name={item.name} quantity={item.quantity} price={item.price} /> )}
+          {cartCtx.items.map(item => <CartItem key={item.id} name={item.name} quantity={item.quantity} price={item.price} onIncrease={() => cartCtx.addItem(item)} onDecrease={() => cartCtx.removeItem(item)} /> )}
         </ul>
         <p className='cart-total'>${cartTotal}</p>
         <p className="modal-actions">
           <button className='buttonClose' onClick={handleClose}>Close</button>
-          <button className='buttonCheckout' onClick={handleCheckout}>Go to Checkout</button>
+          {cartCtx.items.length > 0 && <button className='buttonCheckout' onClick={handleCheckout}>Go to Checkout</button>}
         </p>
     </Modal>
   )

@@ -1,15 +1,15 @@
 import React from 'react'
 
-function CartItem({name, quantity , price}) {
+function CartItem({name, quantity , price , onIncrease , onDecrease}) {
   return (
     <li className='cart-item'>
         <p>
             {name} - {quantity} * {price}
         </p>
         <p className='cart-item-actions'>
-            <button>-</button>
+            <button onClick={onDecrease}>-</button>
             <span>{quantity}</span>
-            <button>+</button>
+            <button onClick={onIncrease} >+</button>
         </p>
     </li>
   )
